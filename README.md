@@ -9,9 +9,7 @@ This application was a coding assessment for RetireUp.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The single page application is deployed on Heroku.
-'''
-'''
+The single page application is deployed on Heroku [Link](https://sp500-live.herokuapp.com/).
 
 ## Getting Started
 Created a React App. The technologies and dependencies used are:
