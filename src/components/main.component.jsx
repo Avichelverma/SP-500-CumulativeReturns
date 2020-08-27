@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Slider from '@material-ui/core/Slider';
-import data from '../assets/history.json';
+import history from '../assets/history.json';
+import CumulativeTable from './cumulativeTable.component';
 
 function Main() {
-	const dataHistory = data;
+	const dataHistory = history;
 	dataHistory.sort(function(a, b) {
 		return a.year - b.year;
 	});
-	const [ minVal, setMinVal ] = useState(1926);
+	const [ minVal, setMinVal ] = useState(2000);
 	const [ maxVal, setMaxVal ] = useState(2019);
 	const [ dataHist, setData ] = useState(dataHistory);
 
@@ -26,6 +27,7 @@ function Main() {
 			<br />
 			<input type="text" id="max" value={maxVal} />
 			<Slider value={[ minVal, maxVal ]} onChange={updateRange} valueLabelDisplay="auto" min={1926} max={2019} />
+			<CumulativeTable data={[ dataHist ]} />
 		</div>
 	);
 }
