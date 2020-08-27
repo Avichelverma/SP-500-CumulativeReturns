@@ -1,4 +1,5 @@
-S&P 500 Yearly Total Returns and Cumulative Returns is a React based single page application. The application contains S&P 500 yearly returns and display cumulative returns for each year.
+# S&P 500 Yearly Total Returns and Cumulative Returns
+S&P 500 Yearly Total Returns and Cumulative Returns is a React based single page application. The application contains S&P 500 yearly returns and display cumulative returns for each year. The data is gathered from website SlickCharts.
 
 The application consists of a range slider that can be used to adjust the range to select ranges of year.
 
