@@ -1,11 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Slider from '@material-ui/core/Slider';
+import Header from './components/header.component';
+import Main from './components/main.component';
+import Footer from './components/footer.component';
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Hello World!</h1>
+			<Header />
+			<Main />
+			<Footer />
 		</div>
 	);
 }
