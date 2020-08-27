@@ -10,9 +10,9 @@ This application was a coding assessment for RetireUp.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 The single page application is deployed on Heroku [Link](https://sp500-live.herokuapp.com/).
-'''
+```
 https://sp500-live.herokuapp.com/
-'''
+```
 
 ## Getting Started
 Created a React App. The technologies and dependencies used are:
@@ -22,9 +22,9 @@ Created a React App. The technologies and dependencies used are:
 
 ### Installing Dependencies:
 Once the source code is setup on the local machine. You can install the dependencies by running:
-'''
+```
 npm install
-'''
+```
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
