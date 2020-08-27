@@ -6,8 +6,17 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+	headerLabel: {
+		fontWeight: 'bold',
+		fontSize: '18px'
+	}
+});
 
 const CumulativeTable = (props) => {
+	const classes = useStyles();
 	const data = props.data[0];
 	const baseReturn = data[0].totalReturn;
 	const baseVal = 100;
@@ -28,18 +37,24 @@ const CumulativeTable = (props) => {
 				<Table aria-label="simple table">
 					<TableHead>
 						<TableRow>
-							<TableCell>Year</TableCell>
-							<TableCell>Total Returns</TableCell>
-							<TableCell>Cumulative Returns</TableCell>
+							<TableCell className={classes.headerLabel} align="center">
+								Year
+							</TableCell>
+							<TableCell className={classes.headerLabel} align="center">
+								Total Return
+							</TableCell>
+							<TableCell className={classes.headerLabel} align="center">
+								Cumulative Return
+							</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>
-						{data.map((data) => {
+						{data.map((data, index) => {
 							return (
-								<TableRow>
-									<TableCell>{data.year}</TableCell>
-									<TableCell>{data.totalReturn}</TableCell>
-									<TableCell>{cumulativeReturns(data.totalReturn)}</TableCell>
+								<TableRow key={index}>
+									<TableCell align="center">{data.year}</TableCell>
+									<TableCell align="center">{data.totalReturn}</TableCell>
+									<TableCell align="center">{cumulativeReturns(data.totalReturn)}</TableCell>
 								</TableRow>
 							);
 						})}

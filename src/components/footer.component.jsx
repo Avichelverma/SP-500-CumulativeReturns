@@ -2,8 +2,9 @@ import React from 'react';
 
 function Footer() {
 	return (
-		<div>
-			<h1>Footer</h1>
+		<div className="footer">
+			<p>© 2020 Created {String('&')} Designed by Avichel Verma.</p>
+			<p>For Coding Assessment Purpose for RetireUp.</p>
 		</div>
 	);
 }

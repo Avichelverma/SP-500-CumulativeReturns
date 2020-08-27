@@ -8,12 +8,11 @@ function Main() {
 	dataHistory.sort(function(a, b) {
 		return a.year - b.year;
 	});
-	const [ minVal, setMinVal ] = useState(2000);
+	const [ minVal, setMinVal ] = useState(1926);
 	const [ maxVal, setMaxVal ] = useState(2019);
 	const [ dataHist, setData ] = useState(dataHistory);
 
 	const updateRange = (event, newValue) => {
-		console.log(newValue);
 		const minId = dataHistory.findIndex((x) => x.year === newValue[0]);
 		const maxId = dataHistory.findIndex((x) => x.year === newValue[1]);
 		const hist = dataHistory.slice(minId, maxId + 1);
@@ -23,10 +22,10 @@ function Main() {
 	};
 	return (
 		<div style={{ width: '90%', margin: 'auto' }}>
-			<input type="text" id="min" value={minVal} />
-			<br />
-			<input type="text" id="max" value={maxVal} />
-			<Slider value={[ minVal, maxVal ]} onChange={updateRange} valueLabelDisplay="auto" min={1926} max={2019} />
+			<div style={{ fontWeight: 'bold', fontSize: '24px', margin: '20px 0' }}>
+				{minVal} - {maxVal}
+				<Slider value={[ minVal, maxVal ]} onChange={updateRange} valueLabelDisplay="auto" min={1926} max={2019} />
+			</div>
 			<CumulativeTable data={[ dataHist ]} />
 		</div>
 	);
